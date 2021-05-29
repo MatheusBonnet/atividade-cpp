@@ -7,6 +7,8 @@ int main(){
 	int num2 = 0;
 	int num3 = 0;
 	int num4 = 0;
+	int maior = 0;
+	int menor = 0;
 	
 	cout << "Digite um numero:";
 	cin >> num1;
@@ -17,30 +19,44 @@ int main(){
 	cout << "Digite o quarto numero:";
 	cin >> num4;
 	
-	if(num1 > num2 && num1 > num3 && num3 > num4){
-		printf("O maior numero foi : %d\n", num1);
+	if(num1 > num2 && num1 > num3 && num3 > num4)
+	{
+		maior = num1;
 	}
-	else if(num2 > num1 && num2 > num3 && num2 > num4){
-		printf("O maior numero foi : %d\n", num2);
+	else if(num2 > num1 && num2 > num3 && num2 > num4)
+	{
+		maior = num2;
 	}
-	else if (num3 > num1 && num3 > num2 && num3 > num4){
-		printf("O maior numero foi : %d\n", num3);
+	else if (num3 > num1 && num3 > num2 && num3 > num4)
+	{
+		maior = num3;
 	}
-	else if(num4 > num1 && num4 > num2 && num4 > num3){
-		printf("O maior numero foi : %d\n", num4);
+	else
+	{
+		maior = num4;
 	}
-	else if(num1 < num2 && num1 < num3 && num3 < num4){
-		printf("O menor numero foi : %d\n", num1);
+	
+	if(num1 < num2 && num1 < num3 && num3 < num4)
+	{
+		menor = num1;
 	}
-	else if(num2 < num1 && num2 < num3 && num2 < num4){
-		printf("O menor numero foi : %d\n", num2);
+	else if(num2 < num1 && num2 < num3 && num2 < num4)
+	{
+		menor = num2;
 	}
-	else if (num3 < num1 && num3 < num2 && num3 < num4){
-		printf("O menor numero foi : %d\n", num3);
+	else if (num3 < num1 && num3 < num2 && num3 < num4)
+	{
+		menor = num3;
 	}
-	else{
-		printf("O menor numero foi : %d\n", num4);
+	else
+	{
+		menor = num4;
 	}
+	
+	cout << "Maior: " << maior;
+	cout << "\n";
+	cout << "Menor: " << menor;
+	cout << "\n";
 	
 	system("pause");
 	return 0;
