@@ -3,7 +3,7 @@ ele seja positivo ou igual a zero e o quadrado do número caso ele seja negativo
 
 #include <iostream>
 using namespace std;
-#include <math.h>
+#include <cmath>
 
 /*
 raiz quadrada de um numero
@@ -16,14 +16,15 @@ int main(){
 	cout <<"Digite um numero: ";
 	cin >> num;
 	
-	raiz = sqrt(num);
 	
 	if(num >= 0){
-		printf("A raiz quadrada de %.2f e: %.2f\n", num, raiz);
+		raiz = sqrt(num);
+		cout << "Raiz: " << raiz;
 	}
 	
 	else{
-		cout << num * num;
+		int pot  = pow(num, 2.0);
+		cout << "Pow: " << pot;
 		
 	}
 	cout <<"\n";
